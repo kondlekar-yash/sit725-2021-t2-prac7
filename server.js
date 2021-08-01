@@ -1,6 +1,6 @@
 var express = require("express")
 var app = express()
-var port = process.env.port || 3000;
+var port = process.env.port || 8080;
 
 var users = [];
 
@@ -25,6 +25,10 @@ app.post("/user/email",(req,res) => {
     users.push(userData);
     res.json({statusCode: 200, data: userData, message:"will connect with you in 2 working days"})
 })
+
+function showProjects(){
+    window.location.replace("http://localhost:8080/showJsProjects");   
+}
 
 app.listen(port,()=>{
     console.log("App listening to: "+port)
