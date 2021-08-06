@@ -1,5 +1,5 @@
 {
-  "name": "sit725-2021-t2-prac3",
+  "name": "sit725-2021-t2-prac4",
   "version": "0.0.0",
   "dependencies": {
     "cf-deployment-tracker-client": "*",
@@ -11,11 +11,11 @@
   },
   "main": "server.js",
   "scripts": {
-    "start" : "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kondlekar-yash/sit725-2021-t2-prac3.git"
+    "url": "git+https://github.com/kondlekar-yash/sit725-2021-t2-prac4.git"
   },
   "keywords": [
     "node",
@@ -24,7 +24,7 @@
   "author": "Yash Kondlekar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kondlekar-yash/sit725-2021-t2-prac3/issues"
+    "url": "https://github.com/kondlekar-yash/sit725-2021-t2-prac4/issues"
   },
-  "homepage": "https://github.com/kondlekar-yash/sit725-2021-t2-prac3#readme"
+  "homepage": "https://github.com/kondlekar-yash/sit725-2021-t2-prac4#readme"
 }
