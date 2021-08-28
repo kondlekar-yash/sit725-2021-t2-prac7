@@ -2,19 +2,23 @@ var express = require("express")
 var app = express()
 var port = process.env.port || 8080;
 
-const MongoClient = require('mongodb').MongoClient;
+let mdb = require("./mdb");
+let projectsRoute = require('./routes/projects');
+
+/* const MongoClient = require('mongodb').MongoClient;
 let clientCollection;
 const uri = "mongodb+srv://725:13111995@725week4.ghoce.mongodb.net/725Portfolio?retryWrites=true&w=majority"
-const client = new MongoClient(uri, {useNewUrlParser: true})
+const client = new MongoClient(uri, {useNewUrlParser: true}) */
 
-var users = [];
+//var users = [];
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname+'/public'))
+app.use('/api/projects', projectsRoute);
 
-const createCollection = (collectionName) => {
+/* const createCollection = (collectionName) => {
     client.connect ((err,db) => {
         clientCollection = client.db().collection(collectionName);
         if(!err) {
@@ -33,9 +37,9 @@ const insertClients = (client,callback) => {
 
 const getClients = (callback) => {
     clientCollection.find({}).toArray(callback);
-}
+} */
 
-app.get('/api/clients',(req,res) => {
+/* app.get('/api/clients',(req,res) => {
     getclients((err,resullt) => {
         if(err) {
             res.json({statusCode: 400, message:err})
@@ -57,12 +61,12 @@ app.post('/api/clients', (req,res) => {
             res.json({statusCode:200, message:"Client added.", data : result})
         }
     })
-})
+}) */
 
 //Created couple of APIs which can be put to use in future.
  
 // 1. To showcase specific JS projects I worked on and similarly can add my other work like C#, Android etc.
-app.get("/showJsProjects",(req,res) => {
+/* app.get("/showJsProjects",(req,res) => {
     var title = "InFuture, Work in progress"
     res.json({statusCode: 200, data: title, message:"NA"})
 })
@@ -74,13 +78,13 @@ app.post("/user/email",(req,res) => {
     userData.email = req.body.email;
     users.push(userData);
     res.json({statusCode: 200, data: userData, message:"will connect with you in 2 working days"})
-})
+})   */
 
-function showProjects(){
+/* function showProjects(){
     window.location.replace("http://localhost:8080/showJsProjects");   
-}
+} */
 
 app.listen(port,()=>{
     console.log("App listening to: "+port)
-    createCollection("Clients");
+    //createCollection("Clients");
 })
