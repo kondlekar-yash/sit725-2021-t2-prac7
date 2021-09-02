@@ -1,4 +1,5 @@
 # MVC
-practical 5
+practical 6
 
-created a MVC pattern of previous content in prac4 on empty page and showed "NA" msg.
+tried to run tests related to my code as well as the code provided by professor.
+errors under work even with professor's code.
